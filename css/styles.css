@@ -47,7 +47,9 @@ body {
   line-height: calc(24 / 16);
   letter-spacing: 0.02em;
   color: var(--primary-txt-cl);
-  width: 100%;
+  width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 img {
@@ -232,7 +234,7 @@ button {
   background-color: var(--secondary-bg-cl);
 }
 .list-item:nth-child(1)::before {
-  background-image: url(../images/icons.svg/icon-feat1.svg);
+  background-image: ;
 }
 .list-item:nth-child(2)::before {
   background-image: url(../images/icons.svg/icon-feat2.svg);
@@ -333,14 +335,28 @@ button {
   color: var(--secondary-txt-cl);
   display: flex;
   justify-content: center;
+  margin-bottom: 8px;
 }
-.team.link {
+.socials-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
 }
-.team-link-item {
+.socials-item {
 }
-profile-link {
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--btn-bg-cl);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
-
+.socials-icon {
+  fill: #f4f4fd;
+}
 /* Customers */
 .customer-section-title {
   font-weight: 700;
@@ -366,6 +382,10 @@ profile-link {
   background-position: center;
   background-size: 104px 56px;
   padding: 16px 32px;
+}
+.customer-link {
+  width: 168px;
+  height: 88px;
 }
 /* Footer */
 .footer {
