@@ -18,8 +18,11 @@
   --third-bg-cl: #e7e9fc;
   --btn-bg-cl: #4d5ae5;
   --hero-bg-cl: rgba(46, 47, 66, 0.7);
-
+  --company-bg-cl: #e5e5e5;
+  --foot-soc-cl: rgba(255, 255, 255, 0.1);
   /* Others */
+  --company-fl-cl: #8e8f99;
+  --footer-bg-hov-cl: #31d0aa;
 }
 
 h1,
@@ -217,40 +220,15 @@ button {
 .features-list {
   display: flex;
   gap: 24px;
-  background-image: ;
 }
 .list-item {
   width: 264px;
-}
-.list-item::before {
-  display: block;
-  content: "";
-  height: 112px;
-  border-radius: 4px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 64px 64px;
-  background-color: var(--secondary-bg-cl);
-}
-.list-item:nth-child(1)::before {
-  background-image: ;
-}
-.list-item:nth-child(2)::before {
-  background-image: url(../images/icons.svg/icon-feat2.svg);
-}
-.list-item:nth-child(3)::before {
-  background-image: url(../images/icons.svg/icon-feat3.svg);
-}
-.list-item:nth-child(4)::before {
-  background-image: url(../images/icons.svg/icon-feat4.svg);
 }
 .features-title {
   font-weight: 500;
   font-size: 20px;
   line-height: calc(24 / 20);
   margin-bottom: 8px;
-  margin-top: 8px;
 }
 .features-desc {
   font-weight: 400;
@@ -258,7 +236,22 @@ button {
   line-height: calc(24 / 16);
   color: var(--secondary-txt-cl);
 }
-
+.features-icons-list {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 8px;
+}
+.features-icons-item {
+  width: 264px;
+  height: 112px;
+  border-radius: 4px;
+  background-color: var(--secondary-bg-cl);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 24px 100px;
+}
+.features-icon {
+}
 /* Our work */
 .work-section {
   padding-top: 0px;
@@ -350,12 +343,16 @@ button {
   align-items: center;
   justify-content: center;
   background-color: var(--btn-bg-cl);
+  fill: #f4f4fd;
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
+.socials-link:hover,
+.socials-link:focus {
+  background-color: var(--accent-bg-cl);
+}
 .socials-icon {
-  fill: #f4f4fd;
 }
 /* Customers */
 .customer-section-title {
@@ -371,30 +368,43 @@ button {
 .customer-list {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 24px;
 }
 .customer-item {
+}
+.customer-link {
   width: 168px;
   height: 88px;
   border: 1px solid #8e8f99;
   border-radius: 4px;
+  fill: var(--company-fl-cl);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 104px 56px;
   padding: 16px 32px;
 }
-.customer-link {
-  width: 168px;
-  height: 88px;
+.customer-link:hover,
+.customer-link:focus {
+  fill: var(--accent-bg-cl);
 }
 /* Footer */
 .footer {
   background-color: var(--primary-bg-cl);
-  color: var(--third-txt-cl);
   padding-top: 100px;
   padding-bottom: 100px;
 }
 .footer-container {
+  display: flex;
+  padding-left: 156px;
+}
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  color: var(--third-txt-cl);
+  margin-right: 120px;
+}
+.footer-right {
   display: flex;
   flex-direction: column;
 }
@@ -411,8 +421,38 @@ button {
   color: var(--accent-txt-cl);
 }
 .footer-desc {
-  width: 264px;
 }
+
+.right-title {
+  font-weight: 500;
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+.footer-list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.footer-item {
+}
+.footer-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--foot-soc-cl);
+  fill: #f4f4fd;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.footer-link:hover,
+.footer-link:focus {
+  background-color: var(--footer-bg-hov-cl);
+}
+.footer-icon {
+}
+
 /* PORTFOLIO Styles */
 
 /* Filter Section */
@@ -447,6 +487,9 @@ button {
 .filter-btn:focus {
   background-color: var(--accent-bg-cl);
   color: var(--light-txt-cl);
+  border: 1px solid #404bbf;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Content Section */
@@ -457,7 +500,7 @@ button {
 .content-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 48px 24px;
 }
 .content-link {
 }
@@ -483,10 +526,4 @@ button {
   border-bottom: 1px solid #e7e9fc;
   border-right: 1px solid #e7e9fc;
   padding: 32px 0px 32px 16px;
-}
-.text-container:hover,
-.text-container:focus {
-  border-left: 1px solid #f4f4fd;
-  border-bottom: 1px solid #f4f4fd;
-  border-right: 1px solid #f4f4fd;
 }
