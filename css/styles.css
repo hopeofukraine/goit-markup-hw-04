@@ -261,7 +261,6 @@ button {
   text-transform: capitalize;
   color: var(--primary-txt-cl);
   margin-bottom: 72px;
-  margin-top: ;
   display: flex;
   justify-content: center;
 }
@@ -273,7 +272,7 @@ button {
   gap: 24px;
 }
 .work-item {
-  width: calc(100% - 24px * 2) / 3;
+  width: calc((100% - 24px * 2) / 3);
 }
 .work-item-img {
 }
